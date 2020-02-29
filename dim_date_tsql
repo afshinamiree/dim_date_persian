@@ -655,7 +655,7 @@ UPDATE DimDate SET
 	PersianMonth = CAST(SUBSTRING(DimDate.PersianDateValue , 6,2)  AS INT),
 	PersianDayOfMonth = CAST(SUBSTRING(DimDate.PersianDateValue , 9,2)  AS INT) 
  
-UPDATE DimDate SET PersianSeason = (PersianMonth-1)/4 + 1,
+UPDATE DimDate SET PersianSeason = (PersianMonth-1)/3 + 1,
 	 PersianMonthName =   CASE DimDate.PersianMonth 
 		WHEN 1 THEN N'فروردین' WHEN 2 THEN N'اردیبهشت' WHEN 3 THEN N'خرداد' 
 		WHEN 4 THEN N'تیر' WHEN 5 THEN N'مرداد' WHEN 6 THEN N'شهریور' 
